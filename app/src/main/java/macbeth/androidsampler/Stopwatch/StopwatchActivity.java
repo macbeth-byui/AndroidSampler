@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.Chronometer;
 import android.widget.TextView;
@@ -23,6 +24,9 @@ public class StopwatchActivity extends AppCompatActivity {
 
         chronometer = findViewById(R.id.chronometer);
         tvSeconds = findViewById(R.id.tv_seconds_elapsed);
+        double x = 3.14 / 0.0;
+
+        Log.d("temp","result" + x);
 
         // It will display current time - base.  By setting base to current time,
         // it will start the display at 0.
@@ -43,7 +47,7 @@ public class StopwatchActivity extends AppCompatActivity {
         });
 
         stop.setOnClickListener((view) -> {
-            chronometer.stop();
+            chronometer.stop(); 
             // I don't want to deal in fractional seconds because this will mess up the the display
             // versus accumulated time ... it might show 5 seconds on clock but accumulated will be 6 and change.
             accumulatedTime = Math.floorDiv(SystemClock.elapsedRealtime() - chronometer.getBase(), 1000) * 1000;

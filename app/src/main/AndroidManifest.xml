@@ -22,7 +22,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Stopwatch.StopwatchActivity"></activity>
+        <activity android:name=".email.EmailActivity"></activity>
+        <activity android:name=".Stopwatch.StopwatchActivity" />
         <activity android:name=".ResourceExample.ResourceActivity" />
         <activity android:name=".ActivityResult.Activity2" />
         <activity android:name=".ActivityResult.Activity1" />

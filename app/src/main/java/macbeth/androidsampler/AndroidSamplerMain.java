@@ -7,6 +7,8 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.firebase.FirebaseApp;
+
 import macbeth.androidsampler.ArcGisMapDisplay.ArcGisMapDisplay;
 import macbeth.androidsampler.CalendarDisplay.CalendarDisplayActivity;
 import macbeth.androidsampler.Files.FilesActivity;
@@ -27,6 +29,7 @@ import macbeth.androidsampler.StorageSharedPreferences.StorageSharedPreferencesA
 import macbeth.androidsampler.Themes.ThemeChanger;
 import macbeth.androidsampler.Pictures.Pictures;
 import macbeth.androidsampler.ActivityResult.Activity1;
+import macbeth.androidsampler.email.EmailActivity;
 
 /**
  * The sampler app has a main activity with buttons to test out the different
@@ -39,6 +42,7 @@ public class AndroidSamplerMain extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_android_sampler_main);
+        FirebaseApp.initializeApp(this);
     }
 
     public void runJSONRecyclerView(View view) {
@@ -138,6 +142,11 @@ public class AndroidSamplerMain extends AppCompatActivity {
 
     public void runStopwatch(View view) {
         Intent intent = new Intent(this, StopwatchActivity.class);
+        startActivity(intent);
+    }
+
+    public void runEmail(View view) {
+        Intent intent = new Intent(this, EmailActivity.class);
         startActivity(intent);
     }
 

@@ -52,7 +52,6 @@ public class FirebaseLogin extends AppCompatActivity {
                 .requestEmail()
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
-        //FirebaseApp.initializeApp(this);
         mAuth = FirebaseAuth.getInstance();
     }
 
