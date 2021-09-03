@@ -32,7 +32,8 @@
         <activity android:name=".Themes.ThemeChanger" />
         <activity android:name=".GPS.GPSActivity" />
         <activity android:name=".Files.FilesActivity" />
-        <activity android:name=".AndroidSamplerMain">
+        <activity android:name=".AndroidSamplerMain"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -55,7 +56,8 @@
         <service
             android:name=".Notifications.AppNotificationService"
             android:label="AppNotificationService"
-            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.service.notification.NotificationListenerService" />
             </intent-filter>
