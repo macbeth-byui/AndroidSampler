@@ -8,4 +8,4 @@
 /build
 /captures
 .externalNativeBuild
-google-serivces.json
+/app/google-services.json
